@@ -97,27 +97,13 @@ class UserListSerializer(serializers.ListSerializer):
             cashier_userx= requestx.user.id
 
             the_data = [Receipts(**item,total=item['unit_price'] * item['quantity'],cashier_user=cashier_userx) for item in validated_data]
-            print('all count data',len(validated_data))
             return Receipts.objects.bulk_create(the_data)
         else:
             the_data= []
             return Receipts.objects.bulk_create(the_data)
 
 
-        # except ValidationError as ex:
-        #     raise serializers.ValidationError({"detail": "input is not valid"})
-
-        # else:
-        #     the_data= None
-        #     return the_data
-        #     return {
-        #         'code': 400,
-        #         'message': 'You are about creating less than 10 receipts '
-        #     }
-
-
-
-
+   
 class UserSerializer(serializers.Serializer):
     customer_name= serializers.CharField(required=True)
     customer_phone=serializers.CharField(required=True)

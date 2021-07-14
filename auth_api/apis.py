@@ -88,8 +88,8 @@ class LoginView(APIView):
                         # return Response(LoginSerializer(user).data, status=status.HTTP_200_OK)
                         return Response({"email":email,
                                          "username":user.username,
-                                         "access_token": str(RefreshToken.for_user(user).access_token),
-                                        "refresh_token":str(RefreshToken.for_user(user))
+                                         "access_token": str(RefreshToken.for_user(user).access_token)
+                                        # "refresh_token":str(RefreshToken.for_user(user))
                         }
                         , status=status.HTTP_200_OK)
 
