@@ -110,6 +110,7 @@ You are tasked to build a receipt generation API that allows only authenticated 
         "unit_price": 1900,
         "quantity": 2
     },
+    ...
     
 ]
 
