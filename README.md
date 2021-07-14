@@ -15,6 +15,9 @@ You are tasked to build a receipt generation API that allows only authenticated 
 
 * User Registration
 
+- registration url: https://receipts-api-app.herokuapp.com/auth/cashier/
+- request type: POST
+
 -  Payload Input:
 ```
 
@@ -44,6 +47,9 @@ You are tasked to build a receipt generation API that allows only authenticated 
 
 
 * User Login
+- login url: https://receipts-api-app.herokuapp.com/auth/login/
+- request type: POST
+
 
 - Payload Input:
 
@@ -78,6 +84,10 @@ You are tasked to build a receipt generation API that allows only authenticated 
 - header 
  'Authorization' :  Bearer <access_token>
  'Content-Type': 'application/json'
+
+
+-  url: https://receipts-api-app.herokuapp.com/app/create/receipt/
+- request type: POST
 
 - Payload Input:
 
