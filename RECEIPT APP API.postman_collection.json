@@ -1,0 +1,151 @@
+{
+	"variables": [],
+	"info": {
+		"name": "RECEIPT APP API",
+		"_postman_id": "26eb6e08-2817-956b-d2de-d0eb3d772328",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create receipt ( 10  and above receipts per request)",
+			"request": {
+				"url": "https://receipts-api-app.herokuapp.com/app/create/receipt/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI2NDg0ODYzLCJqdGkiOiJjNTlmM2ZlZTU0NDk0MTA2OWIyNjkyYzFhYmIyNDM5NSIsInVzZXJfaWQiOjJ9.-F3azRP_vluvWbK0Q_OEfQ-YalIZyJiEBhB8LR8ntHA",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\n    {\n        \"customer_name\": \"Ella T\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 2900,\n        \"quantity\": 2\n    },\n    {\n        \"customer_name\": \"Bella F\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 1900,\n        \"quantity\": 2\n    },\n        {\n        \"customer_name\": \"Dan B\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 2900,\n        \"quantity\": 2\n    },\n    {\n        \"customer_name\": \"James Fred\",\n        \"customer_phone\": \"08067715394\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 1900,\n        \"quantity\": 2\n    },    {\n        \"customer_name\": \"Sunday Adam\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 2900,\n        \"quantity\": 2\n    },\n    {\n        \"customer_name\": \"Sunday Jack\",\n        \"customer_phone\": \"08067715394\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 1900,\n        \"quantity\": 2\n    },    {\n        \"customer_name\": \"Sunday Joe\",\n        \"customer_phone\": \"08067715394\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 2900,\n        \"quantity\": 2\n    },\n    {\n        \"customer_name\": \"HOPKIN Ajayi\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 1900,\n        \"quantity\": 2\n    },\n        {\n        \"customer_name\": \"JACK DOE\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 2900,\n        \"quantity\": 2\n    },\n    {\n        \"customer_name\": \"HOPKIN G\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 1900,\n        \"quantity\": 2\n    },\n        {\n        \"customer_name\": \"Roph DOE\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 2900,\n        \"quantity\": 2\n    }\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create receipt ( less than 10 receipts per request)",
+			"request": {
+				"url": "https://receipts-api-app.herokuapp.com/app/create/receipt/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI2NDg0ODYzLCJqdGkiOiJjNTlmM2ZlZTU0NDk0MTA2OWIyNjkyYzFhYmIyNDM5NSIsInVzZXJfaWQiOjJ9.-F3azRP_vluvWbK0Q_OEfQ-YalIZyJiEBhB8LR8ntHA",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\n    {\n        \"customer_name\": \"Ella T\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 2900,\n        \"quantity\": 2\n    },\n    {\n        \"customer_name\": \"Bella F\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 1900,\n        \"quantity\": 2\n    },\n        {\n        \"customer_name\": \"Dan B\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 2900,\n        \"quantity\": 2\n    },\n    {\n        \"customer_name\": \"James Fred\",\n        \"customer_phone\": \"08067715394\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 1900,\n        \"quantity\": 2\n    },    {\n        \"customer_name\": \"Sunday Adam\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 2900,\n        \"quantity\": 2\n    },\n    {\n        \"customer_name\": \"Sunday Jack\",\n        \"customer_phone\": \"08067715394\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 1900,\n        \"quantity\": 2\n    },    {\n        \"customer_name\": \"Sunday Joe\",\n        \"customer_phone\": \"08067715394\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 2900,\n        \"quantity\": 2\n    },\n    {\n        \"customer_name\": \"HOPKIN Ajayi\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 1900,\n        \"quantity\": 2\n    },\n        {\n        \"customer_name\": \"JACK DOE\",\n        \"customer_phone\": \"080000000\",\n        \"customer_address\": \"IKOYI\",\n        \"item\": \"Macbook Pro\",\n        \"unit_price\": 2900,\n        \"quantity\": 2\n    }\n    ]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login ( invalid login)",
+			"request": {
+				"url": "https://receipts-api-app.herokuapp.com/auth/login/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Y2FzaGllcjAxQGdtYWlsLmNvbTpQYXNzd29yZHMxMjM=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"This field is required.\",\n    \"password\": \"This field is required.\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login ( account not existing)",
+			"request": {
+				"url": "https://receipts-api-app.herokuapp.com/auth/login/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Y2FzaGllcjAxQGdtYWlsLmNvbTpQYXNzd29yZHMxMjM=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"cashier01@mail.com\",\n    \"password\": \"Password123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Registration API ( invalid)",
+			"request": {
+				"url": "https://receipts-api-app.herokuapp.com/auth/cashier/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"cashier\",\n    \"first_name\": \"User1\",\n    \"last_name\": \"Test\",\n    \"email\": \"user@mail.com\",\n    \"sex\": \"male\",\n    \"date_of_birth\": \"2021-01-12\",\n    \"phone\": \"0801111111\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Registration API ( Valid)",
+			"request": {
+				"url": "https://receipts-api-app.herokuapp.com/auth/cashier/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"Password123\",\n    \"username\": \"cashier02\",\n    \"first_name\": \"User1\",\n    \"last_name\": \"Test\",\n    \"email\": \"user01@mail.com\",\n    \"sex\": \"male\",\n    \"date_of_birth\": \"2021-01-12\",\n    \"phone\": \"0801111111\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
