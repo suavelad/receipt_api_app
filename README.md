@@ -34,8 +34,7 @@ You are tasked to build a receipt generation API that allows only authenticated 
 - Payload Response:
 
     - status code : 200
-    ```
-    
+    ``` 
     {
         "status": "Successful"
     }
@@ -47,29 +46,26 @@ You are tasked to build a receipt generation API that allows only authenticated 
 * User Login
 
 - Payload Input:
-```
 
+```
 {
     "email": "cashier@mail.com",
     "password": "Password123"
-
 }
 ```
-
 
 
 - Payload Response:
 
-    ```
-
-    {
+    ``` 
+   
+  {
     "email": "cashier@mail.com",
     "username": "cashier01",
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI2NTEyOTM0LCJqdGkiOiJkMjAwZWViMzhkYjI0NGNhYjQ3YzY1NWI3MjZkYWQ2NyIsInVzZXJfaWQiOjJ9.39NFqfdniNWq0ayKopjsGkfEJV5a5lZ5j2QaUk-juLI" 
-}
-
+} 
 ```
-
+```
 
 
 
