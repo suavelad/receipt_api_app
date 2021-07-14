@@ -16,8 +16,8 @@ You are tasked to build a receipt generation API that allows only authenticated 
 * User Registration
 
 -  Payload Input:
+```
 
-'''
 {
     "password": "Password123",
     "username": "cashier",
@@ -28,39 +28,48 @@ You are tasked to build a receipt generation API that allows only authenticated 
     "date_of_birth": "2021-01-12",
     "phone": "0801111111"
 }
-'''
+```
+
 
 - Payload Response:
 
     - status code : 200
-    '''
+    ```
+    
     {
         "status": "Successful"
     }
-    '''
+   ```
+ 
 
 
 
 * User Login
 
 - Payload Input:
-'''
+```
+
 {
     "email": "cashier@mail.com",
     "password": "Password123"
 
 }
-'''
+```
+
+
 
 - Payload Response:
 
-    '''
+    ```
+
     {
     "email": "cashier@mail.com",
     "username": "cashier01",
     "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI2NTEyOTM0LCJqdGkiOiJkMjAwZWViMzhkYjI0NGNhYjQ3YzY1NWI3MjZkYWQ2NyIsInVzZXJfaWQiOjJ9.39NFqfdniNWq0ayKopjsGkfEJV5a5lZ5j2QaUk-juLI" 
 }
-'''
+```
+
+
 
 
 
@@ -73,7 +82,8 @@ You are tasked to build a receipt generation API that allows only authenticated 
 
 - Payload Input:
 
-'''
+```
+
 [
   
     {
@@ -92,15 +102,18 @@ You are tasked to build a receipt generation API that allows only authenticated 
         "unit_price": 1900,
         "quantity": 2
     },
-    ...
+    
 ]
-'''
+```
+
+
 
 - Payload Output:
 
     - 201 status code  ( for receipt data from 10 and above)
       ( returns the body of the created request)
-    '''
+    
+    ```
     [
     {
         "customer_name": "Sunday Ajayi",
@@ -128,17 +141,21 @@ You are tasked to build a receipt generation API that allows only authenticated 
     },
     ...
     ]
-     '''
+     ```
+
 
     - 400 status code 
 
-     '''
+     ```
+
     {
     "message": [
         "You are about creating less than 10 receipts "
     ]
     
 }
-'''
+```
+
+
      
 
