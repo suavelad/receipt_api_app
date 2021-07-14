@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rest_framework.documentation import include_docs_urls
+from django.views.generic import RedirectView
+from django.contrib.staticfiles.views import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('auth/', include('auth_api.urls')),
+    path('docs/', include_docs_urls(title='Receipt Generation Template', permission_classes='')),
+    # path('', serve, kwargs={'path': 'index.html'}),
+    # path('(?!/?static/)(?!/?media/)(?P<path>.*\..*)$', RedirectView.as_view(url='/static/%(path)s', permanent=False)),
+
 ]
