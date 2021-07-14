@@ -33,7 +33,7 @@ You are tasked to build a receipt generation API that allows only authenticated 
 
 - Payload Response:
 
-    - status code : 200
+    - status code : 201
     ``` 
     {
         "status": "Successful"
@@ -56,6 +56,8 @@ You are tasked to build a receipt generation API that allows only authenticated 
 
 
 - Payload Response:
+
+     - status code : 200
 
     ``` 
    
