@@ -48,12 +48,12 @@ ReceiptSchema =  ManualSchema(fields=[
         location="form",
         schema=coreschema.String()
     ),
-        coreapi.Field(
-        "total",
-        required=True,
-        location="form",
-        schema=coreschema.String()
-    ),
+    #     coreapi.Field(
+    #     "total",
+    #     required=True,
+    #     location="form",
+    #     schema=coreschema.Float()
+    # ),
     coreapi.Field(
         "description",
         required=True,

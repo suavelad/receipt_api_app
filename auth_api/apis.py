@@ -1,12 +1,14 @@
 from rest_framework.viewsets import ModelViewSet
 from django.contrib.auth import authenticate, login, logout, get_user_model
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, Permission
+from .models import User
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .schemas import LoginSchema
+from rest_framework.permissions import AllowAny
 from .serializers import AdminSerializer,CashierSerializer, GroupSerializer, LoginSerializer
-
+from rest_framework_simplejwt.tokens import RefreshToken
 
 class GroupViewSet(ModelViewSet):
 
@@ -48,12 +50,13 @@ class AdminViewSet(ModelViewSet):
             return Response(new_error, status=status.HTTP_400_BAD_REQUEST)
 
 class CashierViewSet(ModelViewSet):
+    permission_classes = (AllowAny,)
 
     def get_queryset(self):
         return get_user_model().objects.filter(groups__name='csh')
     serializer_class = CashierSerializer
 
-    def create(self, request, args, *kwargs):
+    def create(self, request,  *kwargs):
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -69,6 +72,7 @@ class CashierViewSet(ModelViewSet):
 
 class LoginView(APIView):
     schema = LoginSchema
+    permission_classes = (AllowAny,)
 
     def post(self, request):    
         serializer = LoginSerializer(data=request.data)
@@ -80,7 +84,15 @@ class LoginView(APIView):
                 if user.check_password(password):
                     if user.is_active:
                         login(request, user)
-                        return Response(LoginSerializer(user).data, status=status.HTTP_200_OK)
+
+                        # return Response(LoginSerializer(user).data, status=status.HTTP_200_OK)
+                        return Response({"email":email,
+                                         "username":user.username,
+                                         "access_token": str(RefreshToken.for_user(user).access_token),
+                                        "refresh_token":str(RefreshToken.for_user(user))
+                        }
+                        , status=status.HTTP_200_OK)
+
                     else:
                         return Response({
                             "code": 110,

@@ -11,8 +11,8 @@ class User(AbstractUser):
         ('male','Male'),
         ('female','Female')
     )
-    firstname = models.CharField(max_length=100)
-    lastname = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     is_staff = models.BooleanField(default=False, blank=True, null=True)
     is_admin = models.BooleanField(default=False, blank=True, null=True)
