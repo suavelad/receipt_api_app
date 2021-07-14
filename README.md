@@ -26,7 +26,7 @@ You are tasked to build a receipt generation API that allows only authenticated 
     "username": "cashier",
     "first_name": "User1",
     "last_name": "Test",
-    "email": "user@mail.com",
+    "email": "cashier@mail.com",
     "sex": "male",
     "date_of_birth": "2021-01-12",
     "phone": "0801111111"
