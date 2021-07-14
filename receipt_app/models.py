@@ -22,13 +22,5 @@ class Receipts(models.Model):
     def __str__(self):
         self.id
 
-class GlobalVariables(models.Model):
-    id = AutoField(primary_key=True)
-    key = models.CharField(max_length=250)
-    value = models.CharField(max_length=250)
-    time_created = models.TimeField(auto_now_add=True)
-    date_created = models.DateField(auto_now_add=True)
 
-    def __str__(self):
-        self.id
 
