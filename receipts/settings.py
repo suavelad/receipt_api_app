@@ -75,13 +75,27 @@ WSGI_APPLICATION = 'receipts.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
+
+# HEROKU POSTGRES FOR THE TEST DB
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dfh2ajgovgeful',
+        'USER': 'gdckquklpwvtio',
+        'PASSWORD':'63c27c873ebd1d3b265a89d19994adba50a93e5d82bca9be26bb791bd7a7baa6',
+        'HOST': 'ec2-23-23-164-251.compute-1.amazonaws.com',
+        'PORT': '5432'
+
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
