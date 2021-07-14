@@ -62,10 +62,10 @@ You are tasked to build a receipt generation API that allows only authenticated 
   {
     "email": "cashier@mail.com",
     "username": "cashier01",
-    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI2NTEyOTM0LCJqdGkiOiJkMjAwZWViMzhkYjI0NGNhYjQ3YzY1NWI3MjZkYWQ2NyIsInVzZXJfaWQiOjJ9.39NFqfdniNWq0ayKopjsGkfEJV5a5lZ5j2QaUk-juLI" 
-} 
+    "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjI2NTEyOTM0LCJqdGkiOiJkMjAwZWViMzhkYjI0NGNhYjQ3YzY1NWI3MjZkYWQ2NyIsInVzZXJfaWQiOjJ9.39NFqfdniNWq0ayKopjsGkfEJV5a5lZ5j2QaUk-juLI" } 
 ```
 ```
+
 
 
 
@@ -100,7 +100,7 @@ You are tasked to build a receipt generation API that allows only authenticated 
     },
     
 ]
-```
+
 ```
 
 
@@ -138,6 +138,7 @@ You are tasked to build a receipt generation API that allows only authenticated 
     ...
     ]
      ```
+     
 
 
     - 400 status code 
@@ -146,11 +147,10 @@ You are tasked to build a receipt generation API that allows only authenticated 
 
     {
     "message": [
-        "You are about creating less than 10 receipts "
-    ]
-    
-}
+        "You are about creating less than 10 receipts " ]   
+   }
 ```
+
 
 
      
