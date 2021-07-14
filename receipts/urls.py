@@ -22,7 +22,8 @@ from django.contrib.staticfiles.views import serve
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('auth/', include('auth_api.urls')),
-    path('docs/', include_docs_urls(title='Receipt Generation Template', permission_classes='')),
+    path('app/',include('receipt_app.urls')),
+    path('docs/', include_docs_urls(title='Receipt Generation App', permission_classes='')),
     # path('', serve, kwargs={'path': 'index.html'}),
     # path('(?!/?static/)(?!/?media/)(?P<path>.*\..*)$', RedirectView.as_view(url='/static/%(path)s', permanent=False)),
 

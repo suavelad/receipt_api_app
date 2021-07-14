@@ -3,24 +3,59 @@ import coreschema
 from rest_framework.schemas import ManualSchema
 
 
-UpdateMeetingLogSchema =  ManualSchema(fields=[
-
-
+ReceiptSchema =  ManualSchema(fields=[
+ 
     coreapi.Field(
-        "user_id",
+        "casher_user_id",
         required=True,
         location="form",
         schema=coreschema.Integer(description="0 for all meeting list or the user_id ")
     ),
 
     coreapi.Field(
-        "start_date",
+        "customer_name",
         required=True,
         location="form",
         schema=coreschema.String()
     ),
     coreapi.Field(
-        "end_date",
+        "customer_phone",
+        required=True,
+        location="form",
+        schema=coreschema.String()
+    ),
+    coreapi.Field(
+        "customer_address",
+        required=True,
+        location="form",
+        schema=coreschema.String()
+    ),
+    coreapi.Field(
+        "item",
+        required=True,
+        location="form",
+        schema=coreschema.String()
+    ),
+    coreapi.Field(
+        "unit_price",
+        required=True,
+        location="form",
+        schema=coreschema.String()
+    ),
+    coreapi.Field(
+        "quantity",
+        required=True,
+        location="form",
+        schema=coreschema.String()
+    ),
+        coreapi.Field(
+        "total",
+        required=True,
+        location="form",
+        schema=coreschema.String()
+    ),
+    coreapi.Field(
+        "description",
         required=True,
         location="form",
         schema=coreschema.String()
