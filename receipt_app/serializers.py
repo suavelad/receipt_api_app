@@ -7,14 +7,33 @@ from django.db import IntegrityError
 
 class UserListSerializer(serializers.ListSerializer):
 
+
+    @property
+    def custom_full_errors(self):
+        """
+        Returns full errors formatted as per requirements
+        """
+        default_errors = self.errors
+        field_names = []
+        for field_name, field_errors in default_errors.items():
+            field_names.append(field_name)
+        return {
+            'code':140,
+            'message': 'You are about creating less than 10 receipts',
+            'resolve': 'Kindly update your application'
+            }
+
     def validate (self, validated_data):
          if len(validated_data) >= 10 :
              return validated_data
 
          else:
-            raise serializers.ValidationError({ 
-                'message': 'You are about creating less than 10 receipts '
-            })
+             raise custom_full_errors()
+            # raise serializers.ValidationError({ 
+            #     'code': 140,
+            #     'message': 'You are about creating less than 10 receipts',
+            #     'resolve': 'Kindly update your application'
+            # })
 #
     def create(self, validated_data):
 
